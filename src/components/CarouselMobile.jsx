@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
-import "../App.css";
+import "./CarouselMobile.css";
 
 const CarouselMobile = ({ children }) => {
 	const scrollContainerRef = useRef(null);
 	const originalItemsRef = useRef(null);
+    
 	function appendNodeList(parent, nodeList) {
 		Array.from(nodeList).forEach((node) => {
 			parent.appendChild(node.cloneNode(true));
@@ -41,6 +42,6 @@ const CarouselMobile = ({ children }) => {
 			{children}
 		</div>
 	);
-};
+}
 
 export default CarouselMobile;

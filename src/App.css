@@ -1,7 +1,6 @@
 #root {
-	/* max-width: 1280px; */
+	max-width: 1280px;
 	margin: 0 auto;
-	padding: 2rem;
 	text-align: center;
 }
 
@@ -25,26 +24,4 @@
 }
 .carousel-container img {
 	margin-right: 20px;
-}
-
-/* mobile */
-/* Container for horizontal scroll */
-.scroll-container {
-	scrollbar-width: none; 
-	width: 100%;
-	max-width: 100vw;
-	overflow-x: auto; /* Enable horizontal scrolling */
-	white-space: nowrap; /* Prevent line breaks */
-	padding: 20px 0; /* Add some padding for better appearance */
-}
-
-/* Individual items within the scroll container */
-.item {
-	display: inline-block; /* Display items in a row */
-	width: 200px; /* Set the width of each item */
-	height: 200px; /* Set the height of each item (optional) */
-	margin-right: 20px; /* Add some space between items */
-	background-color: #f0f0f0;
-	border-radius: 5px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
