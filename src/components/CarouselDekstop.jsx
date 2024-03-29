@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import CarouselItem from "./CarouselItem.jsx";
 import { useHorizontalScroll } from "./Custom.jsx";
 
-const CarouselDesktop = ({ images }) => {
+const CarouselDesktop = ({ children }) => {
 	const scrollContentRef = useRef(null);
 	const scrollRef = useHorizontalScroll();
 	const { elRef, totalScroll } = scrollRef;
@@ -15,12 +14,8 @@ const CarouselDesktop = ({ images }) => {
 		<>
 			<div className="carousel-container" ref={elRef}>
 				<div className="carousel-content" ref={scrollContentRef}>
-					{images.map((image, index) => (
-						<CarouselItem key={index} src={image} />
-					))}
-					{images.map((image, index) => (
-						<CarouselItem key={index} src={image} />
-					))}
+					{children}
+					{children}
 				</div>
 			</div>
 		</>

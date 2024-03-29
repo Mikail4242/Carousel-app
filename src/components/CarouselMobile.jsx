@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import CarouselItem from "./CarouselItem.jsx";
 import "../App.css";
 
-const CarouselMobile = ({ images }) => {
+const CarouselMobile = ({ children }) => {
 	const scrollContainerRef = useRef(null);
 	const originalItemsRef = useRef(null);
 	function appendNodeList(parent, nodeList) {
@@ -29,9 +28,7 @@ const CarouselMobile = ({ images }) => {
 			style={{ display: "none" }}
 			ref={originalItemsRef}
 			onScroll={handleScroll}>
-			{images.map((image, index) => (
-				<CarouselItem key={index} src={image} />
-			))}
+			{children}
 		</div>
 	);
 
@@ -41,9 +38,7 @@ const CarouselMobile = ({ images }) => {
 			ref={scrollContainerRef}
 			onScroll={handleScroll}>
 			<Original />
-			{images.map((image, index) => (
-				<CarouselItem key={index} src={image} />
-			))}
+			{children}
 		</div>
 	);
 };
